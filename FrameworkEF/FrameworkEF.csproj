@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{65F28C55-6C95-4068-B4F0-B8F318AC20E0}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>FrameworkEF</RootNamespace>
+    <AssemblyName>FrameworkEF</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Address.cs" />
+    <Compile Include="Classes.cs" />
+    <Compile Include="Country.cs" />
+    <Compile Include="Migrations\201904130835429_InitialMigration.cs" />
+    <Compile Include="Migrations\201904130835429_InitialMigration.Designer.cs">
+      <DependentUpon>201904130835429_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904130859123_AddedSubjectTable.cs" />
+    <Compile Include="Migrations\201904130859123_AddedSubjectTable.Designer.cs">
+      <DependentUpon>201904130859123_AddedSubjectTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904130910580_ValidationAddedToSubjectTable.cs" />
+    <Compile Include="Migrations\201904130910580_ValidationAddedToSubjectTable.Designer.cs">
+      <DependentUpon>201904130910580_ValidationAddedToSubjectTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904130939439_updatedSubjectTable.cs" />
+    <Compile Include="Migrations\201904130939439_updatedSubjectTable.Designer.cs">
+      <DependentUpon>201904130939439_updatedSubjectTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904130940586_RemovedAuthornamefromSubjectTable.cs" />
+    <Compile Include="Migrations\201904130940586_RemovedAuthornamefromSubjectTable.Designer.cs">
+      <DependentUpon>201904130940586_RemovedAuthornamefromSubjectTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904130942137_RemovedSubjectTable.cs" />
+    <Compile Include="Migrations\201904130942137_RemovedSubjectTable.Designer.cs">
+      <DependentUpon>201904130942137_RemovedSubjectTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904131003472_studentsTaable.cs" />
+    <Compile Include="Migrations\201904131003472_studentsTaable.Designer.cs">
+      <DependentUpon>201904131003472_studentsTaable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904131005586_AddDataInStudentTable.cs" />
+    <Compile Include="Migrations\201904131005586_AddDataInStudentTable.Designer.cs">
+      <DependentUpon>201904131005586_AddDataInStudentTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904131404316_UpdatedAddressId2StudentTable.cs" />
+    <Compile Include="Migrations\201904131404316_UpdatedAddressId2StudentTable.Designer.cs">
+      <DependentUpon>201904131404316_UpdatedAddressId2StudentTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904131416230_deletedStudentTable.cs" />
+    <Compile Include="Migrations\201904131416230_deletedStudentTable.Designer.cs">
+      <DependentUpon>201904131416230_deletedStudentTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904131516225_SeededCountriesTable.cs" />
+    <Compile Include="Migrations\201904131516225_SeededCountriesTable.Designer.cs">
+      <DependentUpon>201904131516225_SeededCountriesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SchoolContext.cs" />
+    <Compile Include="Student.cs" />
+    <Compile Include="Teachers.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EntityFramework">
+      <Version>6.2.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201904130835429_InitialMigration.resx">
+      <DependentUpon>201904130835429_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904130859123_AddedSubjectTable.resx">
+      <DependentUpon>201904130859123_AddedSubjectTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904130910580_ValidationAddedToSubjectTable.resx">
+      <DependentUpon>201904130910580_ValidationAddedToSubjectTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904130939439_updatedSubjectTable.resx">
+      <DependentUpon>201904130939439_updatedSubjectTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904130940586_RemovedAuthornamefromSubjectTable.resx">
+      <DependentUpon>201904130940586_RemovedAuthornamefromSubjectTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904130942137_RemovedSubjectTable.resx">
+      <DependentUpon>201904130942137_RemovedSubjectTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904131003472_studentsTaable.resx">
+      <DependentUpon>201904131003472_studentsTaable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904131005586_AddDataInStudentTable.resx">
+      <DependentUpon>201904131005586_AddDataInStudentTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904131404316_UpdatedAddressId2StudentTable.resx">
+      <DependentUpon>201904131404316_UpdatedAddressId2StudentTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904131416230_deletedStudentTable.resx">
+      <DependentUpon>201904131416230_deletedStudentTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904131516225_SeededCountriesTable.resx">
+      <DependentUpon>201904131516225_SeededCountriesTable.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
