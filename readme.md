@@ -1,17 +1,19 @@
 EntityFramework
 
 Instead of creating Migrations you can directly create tables in database
-	1.CreateDatabaseIfNotExists  (Default)
-	2.DropCreateDatabaseIfModelChanges
-	3.DropCreateDatabaseAlways
+	CreateDatabaseIfNotExists  (Default)
+	DropCreateDatabaseIfModelChanges
+	DropCreateDatabaseAlways
 
 Migration Types
-	1.Automatic Migration
-	2.Codebased Migration
+-----------------------------
+	Automatic Migration
+	Codebased Migration
 
 To Enable Automatic Migration
-	 1.Set AutomaticMigrationAllowed  to true
-	 2.AutomaticMigrationDataLoss true
+------------------------------------------
+	Set AutomaticMigrationAllowed  to true
+	AutomaticMigrationDataLoss true
 
 
 Codebased Migration
@@ -23,28 +25,28 @@ Codebased Migration
 
 Exercise
 ---------------------
-1.Add Table
-2.Add Property
-3.Update Property
-4.Rename Property
-5.Insert Record in table
-6.Rename the column after inserting the records
-7.Delete the table after taking the backup
-8.Go to previous Migration
-9.Update the table
-10.Seed data
-11.Data Annotation Foreign Key
-12.Foreign Key using Fluent Api
-13.Relation Ship(One to One,One to Many,Many to One,Many to Many)
+	Add Table
+	Add Property
+	Update Property
+	Rename Property
+	Insert Record in table
+	Rename the column after inserting the records
+	Delete the table after taking the backup
+	Go to previous Migration
+	Update the table
+	Seed data
+	Data Annotation Foreign Key
+	Foreign Key using Fluent Api
+	Relation Ship(One to On=e,One to Many,Many to One,Many to Many)
 
 Commands
 -------------------------------------
-Enable-migrations
-add-migration "Migration Name"
-update-database -targetmigration 201904130859123_AddedSubjectTable
+	Enable-migrations
+	add-migration "Migration Name"
+	update-database -targetmigration 201904130859123_AddedSubjectTable
 
 Example Tables
 -----------------------------
-Students  one-one Address
-Teachers one-many Classes
-Students Many-Many Classes
+	Students  one-one Address
+	Teachers one-many Classes
+	Students Many-Many Classes

@@ -90,6 +90,10 @@
     <Compile Include="Migrations\201904131516225_SeededCountriesTable.Designer.cs">
       <DependentUpon>201904131516225_SeededCountriesTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904150142060_TeacherClassesTable.cs" />
+    <Compile Include="Migrations\201904150142060_TeacherClassesTable.Designer.cs">
+      <DependentUpon>201904150142060_TeacherClassesTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -138,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904131516225_SeededCountriesTable.resx">
       <DependentUpon>201904131516225_SeededCountriesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904150142060_TeacherClassesTable.resx">
+      <DependentUpon>201904150142060_TeacherClassesTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
