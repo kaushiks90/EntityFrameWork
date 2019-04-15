@@ -1,6 +1,7 @@
 EntityFramework
 
 Instead of creating Migrations you can directly create tables in database
+-------------------------------------------------------------------------
 	CreateDatabaseIfNotExists  (Default)
 	DropCreateDatabaseIfModelChanges
 	DropCreateDatabaseAlways
